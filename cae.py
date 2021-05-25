@@ -150,10 +150,10 @@ def save_image_as_gif():
     imageio.mimsave('./gif/movie.gif', images)
 
 input_text = splitting_into_packages(f,operating_mode_of_the_machine)
-password = "4JCaWxPq2WyUX7cI"
+password = generate_pass(16)
 x = block_encryption(splitting_into_packages(f,operating_mode_of_the_machine),password,operating_mode_of_the_machine)
 y = x.copy()
-password1 = "4JCaWxPq3WyUX7cI"
+#password1 = "4JCaWxPq3WyUX7cI"
 out = block_decryption(y,password,operating_mode_of_the_machine)
 
 save_layer_as_image(input_text, 90)
